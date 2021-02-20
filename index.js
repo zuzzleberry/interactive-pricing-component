@@ -33,6 +33,13 @@ let updateInfo = (value) => {
     }
 };
 
+let slideValueChange = (e) => {
+    slider.addEventListener("mousemove", (e) => {
+        let value = e.target.value;
+        updateInfo(value);
+    });
+}
+
 toggleButtonBody.addEventListener("click", () => {
     if (buttonClicked === false) {
         toggleButtonBody.style.backgroundColor = "hsl(174, 86%, 45%)";
@@ -53,11 +60,11 @@ toggleButtonBody.addEventListener("click", () => {
 })
 
 slider.addEventListener("mousedown", (e) => {
-    slider.addEventListener("mousemove", (e) => {
-        let value = e.target.value;
-        updateInfo(value);
-    });
+    slideValueChange(e);
 });
+slider.addEventListener("touchmove", (e) => {
+    slideValueChange(e);
+})
 
 // - 10K pageviews / $8 per month
 // - 50K pageviews / $12 per month
