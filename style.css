@@ -28,18 +28,18 @@ body {
 #head {
   font-weight: 800;
   font-size: 1.1rem;
-  padding-top: 4.8rem;
+  padding-top: 5.5rem;
   color: hsl(227, 35%, 25%);
 }
 
 #head h2 {
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.8rem;
 }
 
 #head h3 {
   color: hsl(225, 20%, 60%);
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 15px;
   margin: 0.3rem;
 }
 
@@ -67,11 +67,11 @@ body {
   align-items: center;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 5.6rem;
+  margin-top: 5.4rem;
   padding-top: 1rem;
   padding-bottom: 2rem;
   background-color: hsl(0, 0%, 100%);
-  height: 17.7rem;
+  height: 19rem;
   width: 25rem;
   border-radius: 0.5rem 0.5rem 0rem 0rem;
   box-shadow: 0px 0px 11px 3px rgba(0, 0, 0, 0.05);
@@ -82,7 +82,9 @@ body {
 }
 
 #pageviews {
-  font-size: ;
+  font-weight: 800;
+  font-size: .9rem;
+  letter-spacing: .12rem;
 }
 
 #price-slider {
@@ -106,38 +108,10 @@ body {
   box-shadow: 0px 10px 20px 9px rgba(108, 230, 204, 0.4);
 }
 
-
-#slider {
-  display: flex;
-  align-items: center;
-
-  width: 20rem;
-  height: 0.7rem;
-  background-color: hsl(174, 77%, 80%);
-  border-radius: 1rem;
-  margin-top: 1rem;
-}
-
-#slider-handle {
-  display: flex;
-  align-items: center;
-  width: 3rem;
-  height: 3rem;
-  border-radius: 3rem;
-  background-color: hsl(174, 86%, 45%);
-  box-shadow: 0px 10px 20px 9px rgba(108, 230, 204, 0.4);
-}
-
-#slider-icon {
-    position: relative;
-  margin: auto;
-}
-
 #price {
   display: flex;
   align-items: center;
   margin-top: 3rem;
-
   font-weight: 600;
 }
 
@@ -153,19 +127,22 @@ body {
   display: flex;
   margin: auto;
   margin-top: 2.5rem;
+  margin-right: 1rem;
   margin-bottom: 1rem;
   align-items: center;
   font-size: 0.9rem;
   font-weight: 500;
 }
+
 #toggle-btn-body {
-  margin-left: 1rem;
-  margin-right: 1rem;
+  margin-left: .7rem;
+  margin-right: .7rem;
   background-color: hsl(223, 50%, 87%);
   border-style: none;
   height: 1.6rem;
   width: 3rem;
   border-radius: 1rem;
+  outline: none;
 }
 #toggle-btn-circle {
   display: block;
@@ -173,6 +150,8 @@ body {
   width: 1.1rem;
   height: 1.1rem;
   border-radius: 1rem;
+  margin-left: 0rem;
+  transition: margin-left 20ms ease-in;
 }
 
 #discount-btn-body {
@@ -187,6 +166,7 @@ body {
   height: 1.5rem;
   width: 3rem;
   border-radius: 1rem;
+  outline: none;
 }
 
 #bottom {
@@ -196,7 +176,7 @@ body {
   margin-right: auto;
   margin-top: 0.1rem;
   background-color: hsl(0, 0%, 100%);
-  height: 15.3rem;
+  height: 16rem;
   width: 25rem;
   border-radius: 0rem 0rem 0.5rem 0.5rem;
   box-shadow: 0px 0px 11px 3px rgba(0, 0, 0, 0.05);
@@ -212,6 +192,7 @@ ul {
 li {
   margin: 1rem;
   padding-left: 1rem;
+  margin-right: 3rem;
 }
 
 #start-btn {
@@ -227,6 +208,11 @@ li {
   letter-spacing: 0.05rem;
   font-family: "Manrope", sans-serif;
   margin-bottom: 2.6rem;
+  outline: none;
+  transition: color 200ms;
+}
+#start-btn:hover {
+    color: white;
 }
 
 @media (min-width: 375px) {
