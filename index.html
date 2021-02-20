@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Interactive pricing component</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+  <div id="main-block">
+    <div id="top">
+      <div id="head">
+        <div id="circles-container">
+          <img id="circles" src="images/pattern-circles.svg">
+        </div>
+
+        <h2>Simple, traffic-based pricing</h2>
+        <h3>Sign-up for our 30-day trial.</h3>
+        <h3>No credit card required. </h3>
+      </div>
+
+
+      <div id="main">
+        <h4 id="pageviews">Pageviews</h4>
+
+        <div id="slider-container">
+          <input type="range" min="1" max="100" value="50" id="price-slider">
+        </div>
+
+
+        <div id="price">
+          <span id="price-number">$16.00</span> /month
+        </div>
+
+        <div id="billing">
+          Monthly Billing
+          <button id="toggle-btn-body">
+            <div id="toggle-btn-circle"></div>
+          </button>
+          Yearly Billing
+          25%
+          <button id="discount-btn-body">−25%</button>
+        </div>
+      </div>
+
+      <div id="bottom">
+        <ul>
+          <li>
+            Unlimited websites
+          </li>
+          <li>
+            100% data ownership
+          </li>
+          <li>
+            Email reports
+          </li>
+        </ul>
+        <button id="start-btn">Start my trial</button>
+      </div>
+
+    </div>
+  </div>
+
+
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Adrian Zuanic</a>.
+  </div>
+</body>
+
+</html>
