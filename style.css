@@ -6,16 +6,22 @@ body {
   margin-top: 0;
   font-family: "Manrope", sans-serif;
   text-align: center;
+  background-color: #f0f0f0;
+}
+
+#main-container {
   background-color: hsl(230, 100%, 99%);
   background-image: url("images/bg-pattern.svg");
   background-origin: content-box;
   background-repeat: no-repeat;
+  min-height: 60rem;
+  box-shadow: 0px 9px 20px -2px rgba(0, 0, 0, 0.17);
 }
 
 #main-block {
   display: flex;
   flex-direction: column;
-  min-height: 60rem;
+  min-height: 55rem;
   max-width: 90vw;
   align-content: space-between;
   color: hsl(225, 20%, 60%);
@@ -23,13 +29,25 @@ body {
 }
 
 #head {
+  display: block;
   max-width: 90vw;
   font-weight: 800;
   font-size: 1.1rem;
-  padding-top: 5.5rem;
+
+  margin-top: 1rem;
   color: hsl(227, 35%, 25%);
   margin: auto;
   text-align: center;
+}
+
+#headings {
+  z-index: 1;
+  position: relative;
+}
+
+#subheadings {
+  display: flex;
+  flex-direction: column;
 }
 
 #head h2 {
@@ -48,7 +66,7 @@ body {
   flex-direction: column;
   align-items: center;
   margin: auto;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 #circles {
   stroke: hsl(230, 100%, 99%);
@@ -57,9 +75,8 @@ body {
   position: absolute;
   margin-left: auto;
   margin-right: auto;
-
-  width: 11rem;
-  z-index: -1;
+  width: 11.5rem;
+  z-index: 1;
 }
 
 #main {
@@ -69,7 +86,7 @@ body {
   align-items: center;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 5.4rem;
+  margin-top: 2rem;
   padding-top: 1rem;
   padding-bottom: 2rem;
   background-color: hsl(0, 0%, 100%);
@@ -79,18 +96,16 @@ body {
   box-shadow: 0px 0px 11px 3px rgba(0, 0, 0, 0.05);
 }
 
-#main h4 {
-  margin-bottom: 1.8rem;
-}
-
 #pageviews {
+  margin-top: 1rem;
+  margin-bottom: 1.8rem;
   font-weight: 800;
   font-size: 0.9rem;
   letter-spacing: 0.12rem;
 }
 
 #slider-container {
-  width: 90%;
+  width: 80%;
   display: flex;
   align-content: center;
   position: relative;
@@ -151,9 +166,9 @@ body {
   display: flex;
   margin: auto;
   margin-top: 2.5rem;
-  margin-right: 1rem;
   margin-bottom: 1rem;
   align-items: center;
+  justify-content: center;
   font-size: 0.9rem;
   font-weight: 500;
 }
@@ -179,11 +194,10 @@ body {
 }
 
 #discount-btn-body {
+  display: block;
   margin-left: 0.3rem;
-  margin-right: 0.8rem;
   background-color: hsl(14, 92%, 95%);
   color: hsl(15, 100%, 70%);
-
   font-weight: 700;
   font-size: 0.75rem;
   border-style: none;
@@ -191,6 +205,9 @@ body {
   width: 3rem;
   border-radius: 1rem;
   outline: none;
+}
+#discount-btn-body--large {
+  display: none;
 }
 
 #bottom {
@@ -232,6 +249,7 @@ li {
   letter-spacing: 0.05rem;
   font-family: "Manrope", sans-serif;
   margin-bottom: 2.6rem;
+  margin-top: 0;
   outline: none;
   transition: color 200ms;
 }
@@ -242,11 +260,115 @@ li {
 .attribution {
   font-size: 11px;
   text-align: center;
+
+  margin-top: 3rem;
+  margin-bottom: 1rem;
 }
 
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
 
-@media (min-width: 375px) {
+@media (min-width: 768px) {
+  #main-container {
+    margin: auto;
+    margin-top: 6rem;
+    max-width: 1000px;
+    border-radius: 1rem;
+    min-height: 50rem;
+  }
+
+  #head {
+    max-width: 600px;
+  }
+
+  #head h2 {
+    font-size: 2rem;
+  }
+
+  #subheadings {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  #main-block {
+    display: flex;
+    flex-direction: column;
+    min-height: 45rem;
+    max-width: 90vw;
+
+  }
+  
+
+  #main {
+    height: 15rem;
+    max-width: 600px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+      "a a b"
+      "c c c"
+      "d d d";
+    
+  }
+
+  #pageviews {
+    grid-area: a;
+    margin: 0;
+    margin-left: 4rem;
+    margin-right: auto;
+  }
+  
+
+  #price {
+    grid-area: b;
+    margin: auto;
+    align-self:;
+    margin-right: 4rem;
+  }
+
+ 
+
+  #slider-container {
+    grid-area: c;
+    margin: auto;
+  }
+
+  #bottom {
+    height: 10rem;
+    max-width: 600px;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  #billing {
+    grid-area: d;
+    margin: auto;
+    width: 80%;
+    /* justify-content: space-evenly; */
+  }
+
+  #discount-btn-body {
+    display: none;
+  }
+  #discount-btn-body--large {
+    display: block;
+    margin-left: 0.3rem;
+    
+    background-color: hsl(14, 92%, 95%);
+    color: hsl(15, 100%, 70%);
+    font-weight: 700;
+    font-size: 0.75rem;
+    border-style: none;
+    height: 1.5rem;
+    width: auto;
+    border-radius: 1rem;
+    outline: none;
+  }
+
+  #start-btn {
+    margin-bottom: 0;
+    margin-right: 4rem;
+  }
 }
